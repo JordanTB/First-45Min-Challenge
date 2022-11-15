@@ -1,0 +1,144 @@
+html * {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  display: flex;
+  place-content: center;
+  color: white;
+  background-color: #000;
+  height: 80px;
+  font-style: italic;
+}
+
+.hero {
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.795);
+  border-radius: 1rem;
+  padding: 50px 0;
+  height: auto;
+  width: 100%;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.overview h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  display: flex;
+  place-content: center;
+}
+
+.about {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem;
+  padding: 1rem 1rem;
+  background-color: #000;
+  border-radius: 1rem;
+}
+
+.time {
+  padding: 2rem;
+  grid-column: 1 / 2;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+.chat {
+  padding: 2rem;
+  grid-column: 2 / 3;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+
+.code {
+  padding: 2rem;
+  grid-column: 3 / 4;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(173, 173, 173);
+}
+
+/* media query for small screens */
+@media screen and (max-width: 600px) {
+  .overview {
+    padding: 0 1rem;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: auto 0;
+    margin: auto 0;
+  }
+  .time,
+  .chat,
+  .code {
+    grid-column: 1 / 2;
+    width: 100%;
+    padding: 1rem;
+  }
+  .time img,
+  .chat img,
+  .code img {
+    display: flex;
+    place-content: center;
+    width: 25%;
+    padding: auto;
+    margin: auto;
+    height: auto;
+  }
+}
